@@ -1,0 +1,87 @@
+/* Navbar Container */
+.navbar-container {
+    background: #333; /* Dark background for contrast */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navbar Content: centers content and limits max width */
+  .navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo Styling */
+  .navbar-logo {
+    text-decoration: none;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  /* Desktop Menu */
+  .menu-desktop {
+    display: flex;
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-text {
+    font-size: 16px;
+    color: #ccc;
+    padding: 5px 0;
+  }
+  
+  /* Hover effect: change text color and add an underline effect */
+  .menu-link:hover .menu-text,
+  .menu-link:focus .menu-text {
+    color: #fff;
+  }
+  
+  /* Underline animation on hover */
+  .menu-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #f8f5f5;
+    transition: width 0.3s ease;
+    bottom: -3px;
+    left: 0;
+  }
+  
+  .menu-item:hover::after,
+  .menu-item:focus::after {
+    width: 100%;
+  }
+  
+  /* Responsive: Hide desktop menu on smaller screens */
+  @media (max-width: 768px) {
+    .menu-desktop {
+      display: none;
+    }
+  }
+  
