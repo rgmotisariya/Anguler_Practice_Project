@@ -1,10 +1,11 @@
 import { Component ,HostListener} from '@angular/core';
 import { CommonModule} from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true, 
-  imports: [CommonModule], 
+  imports: [CommonModule,RouterModule], 
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -13,7 +14,7 @@ export class NavbarComponent {
   showMobileMenu = false;
 
     menuList = [
-      { id: 1, name: 'Home', link: '/' },
+      { id: 1, name: 'Home', link: '/home' },
       { id: 2, name: 'Product', link: '/product' },
       { id: 3, name: 'Service', link: '/service' },
       { id: 4, name: 'Gallery', link: '/gallery' },

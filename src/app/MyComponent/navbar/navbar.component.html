@@ -9,7 +9,7 @@
     <div class="menu-desktop">
       <ul class="menu-list">
         <li *ngFor="let menu of menuList" class="menu-item">
-          <a  class="menu-link">
+          <a  [routerLink]="menu.link"  routerLinkActive="active" class="menu-link">
             <p class="menu-text">{{ menu.name }}</p>
           </a>
         </li>
@@ -25,7 +25,7 @@
   <div *ngIf="mobileScreen && showMobileMenu" class="mobile-menu">
     <ul class="mobile-menu-list">
       <li *ngFor="let menu of menuList" class="mobile-menu-item">
-        <a  class="mobile-menu-link">{{ menu.name }}</a>
+        <a   [routerLink]="menu.link" routerLinkActive="active" class="mobile-menu-link">{{ menu.name }}</a>
       </li>
     </ul>
   </div>  
