@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component ,HostListener} from '@angular/core';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -9,12 +9,32 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  menuList = [
-    { id: 1, name: 'Home', link: '/' },
-    { id: 2, name: 'Product', link: '/Product' },
-    { id: 2, name: 'Service', link: '/Service' },
-    { id: 2, name: 'Service', link: '/Service' },
-    { id: 3, name: 'Gallery', link: '/Gallery' },
-    { id: 4, name: 'Contact Us', link: '/contactus' },
+  mobileScreen=false;
+  showMobileMenu = false;
+
+    menuList = [
+      { id: 1, name: 'Home', link: '/' },
+      { id: 2, name: 'Product', link: '/product' },
+      { id: 3, name: 'Service', link: '/service' },
+      { id: 4, name: 'Gallery', link: '/gallery' },
+      { id: 5, name: 'Contact Us', link: '/contactus' },
   ];
+  
+  ngOnInit() {
+    window.addEventListener('resize', this.checkScreenSize.bind(this));
+    this.checkScreenSize(); // Initial check
+  }
+  
+  private checkScreenSize() {
+    const screenWidth = window.innerWidth;
+    this.mobileScreen = screenWidth <= 768;
+
+    if (!this.mobileScreen) {
+      this.showMobileMenu = false;
+    }
+  }
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
+  }
 }

@@ -2,7 +2,7 @@
   <div class="navbar-content">
     <!-- Logo -->
     <a routerLink="/" class="navbar-logo">
-      <p class="logo-text">SamudraTech</p>
+      <img src="SamudraLogo.png" alt="SamudraTech Logo" class="logo-img">
     </a>
 
     <!-- Desktop Menu -->
@@ -15,5 +15,21 @@
         </li>
       </ul>
     </div>
+
+ <!-- Mobile Menu Button -->
+    <button class="menu-toggle" *ngIf="mobileScreen" (click)="toggleMobileMenu()">
+      ☰
+    </button>
+  
+   <!-- Mobile Menu Dropdown -->
+  <div *ngIf="mobileScreen && showMobileMenu" class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li *ngFor="let menu of menuList" class="mobile-menu-item">
+        <a  class="mobile-menu-link">{{ menu.name }}</a>
+      </li>
+    </ul>
+  </div>  
+
+ 
   </div>
 </div>
