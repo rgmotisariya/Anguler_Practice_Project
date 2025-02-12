@@ -1,0 +1,89 @@
+.home-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    background: #aac3f5;
+    padding: 50px 20px;
+  }
+  
+  .hero-logo {
+    max-width: 200px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  /* About Section */
+  .about, .services, .products, .testimonials, .contact {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background: #004494;
+  }
+  
+  /* Services Section */
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+  }
+  
+  .service-card .icon {
+    font-size: 30px;
+  }
+  
+  /* Products */
+  .products ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .products li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  /* Testimonials */
+  .testimonial {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .testimonial span {
+    font-weight: bold;
+  }
+  
+  /* Contact Section */
+  .contact p {
+    font-size: 1.1rem;
+  }
+  
