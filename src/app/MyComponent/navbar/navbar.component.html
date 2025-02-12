@@ -15,7 +15,7 @@
         </li>
       </ul>
     </div>
-
+ 
  <!-- Mobile Menu Button -->
     <button class="menu-toggle" *ngIf="mobileScreen" (click)="toggleMobileMenu()">
       ☰
@@ -25,7 +25,7 @@
   <div *ngIf="mobileScreen && showMobileMenu" class="mobile-menu">
     <ul class="mobile-menu-list">
       <li *ngFor="let menu of menuList" class="mobile-menu-item">
-        <a   [routerLink]="menu.link" routerLinkActive="active" class="mobile-menu-link">{{ menu.name }}</a>
+        <a   [routerLink]="menu.link" routerLinkActive="active" class="mobile-menu-link"  (click)="closeMenuOnSelection()">{{ menu.name }}</a>
       </li>
     </ul>
   </div>  

@@ -21,11 +21,13 @@ export class NavbarComponent {
       { id: 5, name: 'Contact Us', link: '/contactus' },
   ];
   
+
   ngOnInit() {
     window.addEventListener('resize', this.checkScreenSize.bind(this));
+    window.addEventListener('scroll', this.closeMobileMenuOnScroll.bind(this)); // Listen for scroll event
     this.checkScreenSize(); // Initial check
   }
-  
+
   private checkScreenSize() {
     const screenWidth = window.innerWidth;
     this.mobileScreen = screenWidth <= 768;
@@ -37,5 +39,23 @@ export class NavbarComponent {
 
   toggleMobileMenu() {
     this.showMobileMenu = !this.showMobileMenu;
+  }
+
+  @HostListener('window:scroll', [])
+  closeMobileMenuOnScroll() {
+    if (this.mobileScreen && this.showMobileMenu) {
+      this.showMobileMenu = false;
+    }
+  }
+  /** Close mobile menu when a menu item is selected */
+  closeMenuOnSelection() {
+    if (this.mobileScreen) {
+      this.showMobileMenu = false;
+    }
+  }
+  
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.checkScreenSize.bind(this));
+    window.removeEventListener('scroll', this.closeMobileMenuOnScroll.bind(this));
   }
 }
