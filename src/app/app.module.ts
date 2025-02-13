@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import {AppRoutes ,routingComponent} from './app.routes';
 import { RouterModule } from '@angular/router';
-
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
     declarations:[
@@ -10,7 +10,8 @@ import { RouterModule } from '@angular/router';
     ],
     imports:[
         BrowserModule,
-        AppRoutes
+        AppRoutes,
+        SwiperModule
     ],
     providers:[],
     bootstrap:[]
