@@ -70,3 +70,132 @@
 
 
 /* ------------------------------------------------------------------------ */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 30px 4px;
+  border-top: rgb(190, 190, 190) 1px solid;
+  border-bottom: rgb(190, 190, 190) 1px solid ;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  animation: slideAnimation 10s linear infinite;
+}
+
+.slide {
+  flex-shrink: 10;
+  padding: 10px;
+
+}
+
+.slide img {
+  height: 50px; /* Adjust based on your logo sizes */
+  width: auto;
+}
+
+@keyframes slideAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 763px) {
+  .slider-container {
+    padding: 10px 4px;
+  }
+}
+@media (max-width: 450px) {
+  .slider-container {
+    padding: 5px 4px;
+  }
+}
+
+/* ---------------------services------------------------- */
+
+.services-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+h2 {
+  font-weight: 600 !important;
+  color: #0d2f5d;
+  font-size: 48px !important;
+  line-height: 60px !important;
+  padding: 16px 24px;
+}
+h4 {
+  font-size: 32px !important;
+  line-height: 40px !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px;
+  color: #0d2f5d;
+
+}
+.services_left {
+  width: 40%;
+}
+
+.services_left a {
+  display:block;
+  text-decoration: none;
+  color: #949494;
+  font-weight: 600;
+  transition: all .3s;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-size: 24px;
+  line-height: 32px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.services_right{
+  width:60%;
+  background-color:#fafafa;
+  padding: 40px 40px 80px;
+}
+.services_right p{
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0 !important;
+  color:black;
+  font-family: Poppins, sans-serif !important;
+}
+/* --------button _-------- */
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.custom-btn:hover {
+  background-color: #ffffff;
+  border:#007bff solid 1px;
+  color: #007bff;
+}
+
+.custom-btn svg {
+  margin-left: 8px;
+  fill: white;
+}
+
+.custom-btn:hover svg {
+  fill: #007bff;;
+}
