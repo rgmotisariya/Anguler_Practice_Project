@@ -1,43 +1,24 @@
 import { Component } from '@angular/core';
 import { CommonModule} from '@angular/common';
+import { HomeHeaderComponent } from './HomeComponents/home-header/home-header.component';
+import { HomeOurServicesComponent } from './HomeComponents/home-our-services/home-our-services.component';
+import { HomeLogoSliderComponent } from './HomeComponents/home-logo-slider/home-logo-slider.component';
+import { HomeProductsComponent } from './HomeComponents/home-products/home-products.component';
+import { HomeAboutUsComponent } from './HomeComponents/home-about-us/home-about-us.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule,
+    HomeHeaderComponent,
+    HomeOurServicesComponent,
+    HomeLogoSliderComponent,
+    HomeProductsComponent,
+    HomeAboutUsComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  logos: string[] = [
-    'saamarthya.png',
-    'nandini.png',
-    'mayur_dairy.png',
-    'nddb_dairy_services.png','saamarthya.png',
-    'nandini.png',
-    'mayur_dairy.png',
-
-    'nddb_dairy_services.png',
-    'saamarthya.png',
-    'nandini.png',
-    'mayur_dairy.png',
-
-    'nddb_dairy_services.png',
-    'saamarthya.png',
-    'nandini.png',
-    'mayur_dairy.png',
-
-    'nddb_dairy_services.png'
-  ];
-
-  services = [
-    {
-      title: 'Startups',
-      description: 'We deliver affordable, scalable tech solutions to support rapid startup growth and market readiness.',
-      image: 'assets/images/startup.png'
-    },
-    {
-      title: 'B2B',
-      description: 'Our solutions empower businesses with advanced technologies that improve processes, productivity, and performance.',
-      image: 'assets/images/b2b.png'
-    }]
+ 
+ 
 }

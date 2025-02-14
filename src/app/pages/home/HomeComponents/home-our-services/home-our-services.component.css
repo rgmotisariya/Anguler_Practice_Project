@@ -1,0 +1,105 @@
+/* --------------------- Services Section ------------------------- */
+
+.services-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+h2 {
+  font-weight: 600;
+  color: #0d2f5d;
+  font-size: 48px;
+  line-height: 60px;
+  padding: 16px 24px;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #132A6D;
+}
+
+.services_left {
+  width: 40%;
+}
+
+.services_list a {
+  display: block;
+  text-decoration: none;
+  color: #949494;
+  font-weight: 600;
+  transition: all .3s;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-size: 24px;
+  line-height: 32px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.services_list a:hover {
+  color:  #172983;
+}
+
+/* Highlight active service */
+.services_list a.active {
+  color: #132A6D  ;
+  font-weight: 700;
+  border-left: 4px solid #132A6D;
+  padding-left: 20px;
+}
+
+/* ------------------ Right Side ---------------------- */
+.services_right {
+  width: 60%;
+  background-color: #fafafa;
+  padding: 40px;
+}
+
+.services_right p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: black;
+  font-family: Poppins, sans-serif;
+}
+
+/* -------- Button -------- */
+.btn_container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 40px;
+}
+
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #172983;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.custom-btn:hover {
+  background-color: #ffffff;
+  border: #172983 solid 1px;
+  color: #172983;
+}
+
+.custom-btn svg {
+  margin-left: 8px;
+  fill: white;
+}
+
+.custom-btn:hover svg {
+  fill: #007bff;
+}
