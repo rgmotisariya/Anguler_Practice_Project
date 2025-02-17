@@ -1,9 +1,23 @@
+<div class="carousel-container">
+  <div class="carousel" [style.transform]="carouselTransform">
+    <div *ngFor="let slide of slides; let i = index"
+         class="carousel-slide"
+         [class.active]="i === currentSlideIndex"
+         [ngStyle]="{'background-color': slide.background}">
+      <div class="container">
+        <div class="banner-left">
+          <h3>{{ slide.title }}<br /><span class="right-to-left">{{ slide.subtitle }}</span></h3>
+          <a [routerLink]="slide.link" class="banner-border">{{ slide.linkText }}</a>
+        </div>
 
-<header class="hero-header">
-    
-    <h1>One Stop Dairy Supply Chain Management via IOT</h1>
-     <div class="image-wrapper">
-       <img src="Homepage-Banner-01.png" alt="Supply Chain" class="animated-image" />
-     </div>
-     
- </header>
+        <div class="banner-right">
+          <img [src]='slide.circleImage' alt="{{ slide.title }} ">      
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button class="carousel-btn prev" (click)="prevSlide()">&#10094;</button>
+  <button class="carousel-btn next" (click)="nextSlide()">&#10095;</button>
+</div>

@@ -1,6 +1,5 @@
 <!-- Services Section -->
 <section class="services-container">
-
   <!-- Left Side - Service List -->
   <div class="services_left">
     <h2>Our Services</h2>
@@ -9,7 +8,7 @@
          href="javascript:void(0);" 
          (click)="setActiveService(service)"
          [class.active]="activeService.title === service.title">
-        {{ service.title }}
+        {{ service.title }} 
       </a>
     </div>
   </div>
@@ -18,7 +17,6 @@
   <div class="services_right">
     <h4>{{ activeService.title }}</h4>
     <p>{{ activeService.description }}</p>
-
     <div class="btn_container">
       <a target="_blank" href="#" class="custom-btn">
         Explore All
@@ -28,5 +26,4 @@
       </a>
     </div>
   </div>
-
 </section>

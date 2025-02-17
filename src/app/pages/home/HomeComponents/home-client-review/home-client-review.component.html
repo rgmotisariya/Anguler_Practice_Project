@@ -1,1 +1,50 @@
-<p>home-client-review works!</p>
+<div class="testimonial-section" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+  <div class="testimonial-heading">
+    <h4>OUR CLIENTS</h4>
+    <h1>Testimonial</h1>
+  </div>
+</div>
+
+<div class="client-review-container">
+    <button class="nav-btn left" (click)="scrollLeft()">&#10094;</button>
+  
+    <div class="reviews-wrapper">
+      <div class="reviews" #reviews>
+
+        <div *ngFor="let review of testimonials" class="review-card">
+
+          <div class="review-header">
+            <div class="company-logo">
+              <img [src]="review.logo" alt="logo">
+            </div>
+            <div class="company-info">
+              <h2>{{ review.companyName }}</h2>
+              <h4>{{ review.position }}</h4>
+            </div>
+          </div>
+
+          <p class="review-text">{{ review.review }}</p>
+
+        </div>
+        
+      </div>
+    </div>
+  
+    <button class="nav-btn right" (click)="scrollRight()">&#10095;</button>
+  </div>
+
+  
+  <div class="statistics-section">
+    <div class="stat-item">
+        <h1>1000+</h1>
+        <p>Installations</p>
+    </div>
+    <div class="stat-item">
+        <h1>200+</h1>
+        <p>Happy Customers</p>
+    </div>
+    <div class="stat-item">
+        <h1>10+</h1>
+        <p>States Covered</p>
+    </div>
+</div>

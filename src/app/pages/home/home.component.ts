@@ -5,7 +5,8 @@ import { HomeOurServicesComponent } from './HomeComponents/home-our-services/hom
 import { HomeLogoSliderComponent } from './HomeComponents/home-logo-slider/home-logo-slider.component';
 import { HomeProductsComponent } from './HomeComponents/home-products/home-products.component';
 import { HomeAboutUsComponent } from './HomeComponents/home-about-us/home-about-us.component';
-
+import { HomeClientReviewComponent } from './HomeComponents/home-client-review/home-client-review.component';
+import { ContactUsComponent } from '../../MyComponent/contact-us/contact-us.component';
 @Component({
   selector: 'app-home',
   imports: [CommonModule,
@@ -13,7 +14,9 @@ import { HomeAboutUsComponent } from './HomeComponents/home-about-us/home-about-
     HomeOurServicesComponent,
     HomeLogoSliderComponent,
     HomeProductsComponent,
-    HomeAboutUsComponent
+    HomeAboutUsComponent,
+    HomeClientReviewComponent,
+    ContactUsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

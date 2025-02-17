@@ -1,0 +1,209 @@
+/* Container styling */
+.testimonial-section {
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+/* Text container */
+.testimonial-heading {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #172983;
+}
+
+/* Styling for headings */
+.testimonial-heading h4 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.testimonial-heading h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+
+  .testimonial-heading h1 {
+    font-size: 36px;
+  }
+
+  .testimonial-heading h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .testimonial-heading h1 {
+    font-size: 28px;
+  }
+
+  .testimonial-heading h4 {
+    font-size: 18px;
+  }
+}
+
+
+/* Container */
+.client-review-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Review Wrapper */
+  .reviews-wrapper {
+    width: 80%;
+    overflow: hidden;
+  }
+  
+  /* Review Cards */
+  .reviews {
+    display: flex;
+    gap: 20px;
+   
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  /* Hide scrollbar */
+  .reviews::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .review-card {
+    flex: 0 0 30%;
+    background: #fff;
+    padding: 20px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(8, 54, 180, 0.274);
+    text-align: justify;
+    min-width: 300px;
+  }
+  
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .company-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .company-info h2 {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .company-info h4 {
+    font-size: 14px;
+    text-align: left;
+    color: #777;
+  }
+  
+  /* Review text */
+  .review-text {
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+  }
+  
+  /* Navigation Buttons */
+  .nav-btn {
+    background-color: #172983;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .nav-btn:hover {
+    background-color: #132A6D;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .review-card {
+      flex: 0 0 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .review-card {
+      flex: 0 0 90%;
+    }
+  }
+  
+/* decimal details */
+/* General styles for the section */
+.statistics-section {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin:  20px;
+  padding: 10px;  
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for each stat box */
+.stat-item {
+  text-align: center;
+  padding: 30px;
+  width: 30%;
+}
+
+/* Heading styling for stat-item */
+.stat-item h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #172983;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling for stat-item */
+.stat-item p {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* .statistics-section {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+
+  .stat-item {
+      margin-bottom: 20px;
+      width: 80%;
+  } */
+}
+
+  

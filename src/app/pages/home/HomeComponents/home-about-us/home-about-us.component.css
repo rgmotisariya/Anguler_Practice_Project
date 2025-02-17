@@ -1,6 +1,7 @@
 /* Container Styling */
 .aboutus-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
@@ -43,9 +44,10 @@
 
 .intro h3 {
     font-size: 1.5rem;
-    font-weight: 500;
     color: #333;
     margin-bottom: 15px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .intro p {
@@ -58,12 +60,12 @@
 @media (max-width: 992px) {
     .aboutus-container {
         flex-direction: column-reverse;
-        text-align: center;
         padding: 30px;
     }
 
     .intro-video, .intro {
         max-width: 100%;
+        text-align: center;
     }
 
     .intro-video iframe {
@@ -77,5 +79,6 @@
 
     .intro h3 {
         font-size: 1.3rem;
+        font-style: italic;
     }
 }

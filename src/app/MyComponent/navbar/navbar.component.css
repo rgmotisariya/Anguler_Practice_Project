@@ -1,9 +1,26 @@
-
-/* Navbar Container */
+/* Navbar - Sticky at Top */
 .navbar-container {
-  background: #97bffa;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(5px); 
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #172983;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add background and shadow when scrolling */
+.navbar-container.scrolled {
+  background:transparent; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+/* Adjust body padding to prevent content from being hidden behind navbar */
+body {
+  padding-top: 60px; 
 }
 
 .navbar-content {
@@ -52,13 +69,14 @@
 
 .menu-text {
   font-size: 16px;
-  color: #ccc;
+  color: #172983;
+  font-weight: 600;
   margin-bottom: 3px;
 }
 
 .menu-link:hover .menu-text,
 .menu-link:focus .menu-text {
-  color: #fff;
+  color: #172983;
 }
 
 /* Menu Underline Animation */
@@ -67,7 +85,7 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background: #f8f5f5;
+  background: #172983;
   transition: width 0.3s ease;
   bottom: -1px;
   left: 0;

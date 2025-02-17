@@ -1,8 +1,8 @@
 /* Footer Container */
 .footer-container {
   bottom: 0;
-  background-color: #aac3f5;
-  color: rgb(3, 3, 3);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   padding: 10px 40px;
 
   
@@ -43,21 +43,21 @@
 
 /* Contact Info */
 .contact-info {
-  color: #333;
+  color: #e0e0e0;
   text-align: right;
 }
 
 .contact-info a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-size: .8rem;
   font-weight: 600;
   transition: color 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
-  color: #1f55b8; /* Dark Blue Hover */
+  color: #ccdcfa; /* Dark Blue Hover */
 }
 
 /* Social Media Icons Container */
@@ -157,13 +157,13 @@
   text-decoration: none;
   font-size: .9rem;
   display: inline-block;
-  color: #767676;
+  color: #a19f9f;
   cursor: pointer;
   transition: color 0.3s ease; /* Smooth transition effect */
 }
 
 .footer-section li a:hover {
-  color: black; /* Change text color to black on hover */
+  color: rgb(255, 255, 255); /* Change text color to black on hover */
 }
 
 /*  */
