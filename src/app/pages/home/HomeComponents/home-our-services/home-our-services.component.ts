@@ -8,22 +8,22 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeOurServicesComponent {
   public activeService: any;
-
+  
   services = [
     {
       title: 'Web Development',
       description: 'Our meticulous approach to creating web applications places us among the top web application development services. We have developed numerous web applications by thoroughly understanding and addressing our clients\' requirements.',
-      image: 'assets/images/web-development.png'
+      image: '01-Services (1).png'
     },
     {
       title: 'Mobile App Development',
       description: 'We specialize in building high-performance mobile apps tailored to your business needs. From Android to iOS, our solutions ensure smooth and efficient user experiences.',
-      image: 'assets/images/mobile-app.png'
+      image: '02-Services.png'
     },
     {
       title: 'IoT Development',
       description: 'Our IoT solutions enable businesses to leverage smart devices, automation, and connectivity for enhanced efficiency and innovation.',
-      image: 'assets/images/iot.png'
+      image: '03-Services.png'
     }
   ];
 

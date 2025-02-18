@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import {AppRoutes ,routingComponent} from './app.routes';
 import { RouterModule } from '@angular/router';
-import { SwiperModule } from 'swiper/angular';
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
     declarations:[
@@ -11,7 +11,7 @@ import { SwiperModule } from 'swiper/angular';
     imports:[
         BrowserModule,
         AppRoutes,
-        SwiperModule
+        FormsModule
     ],
     providers:[],
     bootstrap:[]

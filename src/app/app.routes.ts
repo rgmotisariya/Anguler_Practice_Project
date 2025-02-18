@@ -12,8 +12,6 @@ export const routes: Routes = [
      { path:"gallery",component:GalleryComponent},
      { path:"contactus",component:ContactusComponent},
      { path:"product",component:ProductsComponent},
-
-
 ];
 
 @NgModule({
