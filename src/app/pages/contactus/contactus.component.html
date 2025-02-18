@@ -1,1 +1,143 @@
-<p>contactus works!</p>
+<div class="contactUs-img-container">
+    <img src="contactUs_Header.png" alt="">
+</div>
+
+<div class="contact-us">
+    <div class="Head-contact-info">
+        <h3>Head Office</h3>
+        <div class="card">
+            <div class="logo">
+                <img src="" alt="logo">
+            </div>
+            <div class="location">
+                <h4>Our Address :</h4>
+                <p>3rd Floor, "SAMUDRA", Suresh Mehta Chawk, Ambica Nagar Road, Palanpur. 385 001. Banaskantha. Gujarat. India.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="logo">
+                <img src="" alt="logo">
+            </div>
+            <div class="location">
+                <h4>Phone :</h4>
+                <p>+91 9925044205</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="logo">
+                <img src="" alt="logo">
+            </div>
+            <div class="location">
+                <h4>Our Address :</h4>
+                <p>infosamudratech.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <!--left Contact Form --> 
+
+    <!-- TDF -->
+     <!-- {{userForm.value | json }} -->
+
+    <form class="contact-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <!-- {{userForm.form.valid}} -->
+        <h2>Get In Touch</h2>
+      
+        <div class="form-group ">
+          <input type="text" placeholder="Full Name*" id="full-name" name="fullName" [(ngModel)]="user.fullName" #fullName="ngModel" [class.is-invalid]="fullName.invalid && fullName.touched" class="form-control" required minlength="3">
+          <div class="error" *ngIf="fullName.invalid && fullName.touched">
+            <small *ngIf="fullName.errors?.['required']" [ngStyle]="{color:'red'}">Full Name is required.</small>
+            <small *ngIf="fullName.errors?.['minlength']"  [ngStyle]="{color:'red'}">Full Name must be at least 3 characters long.</small>
+         </div>
+          <!-- {{name.valid}} -->
+        </div>
+        
+        <div class="form-group">
+          <input type="tel" placeholder="Phone*" id="phone" name="phone" [(ngModel)]="user.phone" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched" class="form-control"
+           pattern="^[0-9]{10}$" required>
+            <div class="error" *ngIf="phone.invalid && phone.touched">
+                <small *ngIf="phone.errors?.['required']" [ngStyle]="{color:'red'}">Phone number is required.</small>
+                <small *ngIf="phone.errors?.['pattern']" [ngStyle]="{color:'red'}">Phone number must be 10 digits.</small>
+            </div>
+        </div>
+      
+        <div class="form-group">
+          <input type="email" placeholder="Email*" id="email" name="email" [(ngModel)]="user.email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"  class="form-control" required email>
+          <div class="error" *ngIf="email.invalid && email.touched">
+            <small *ngIf="email.errors?.['required']" [ngStyle]="{color:'red'}" >Email is required.</small>
+            <small *ngIf="email.errors?.['email']" [ngStyle]="{color:'red'}">Invalid email format.</small>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <textarea id="message" placeholder="Type Your Message Here*" name="message" [(ngModel)]="user.message" #message="ngModel"  [class.is-invalid]="message.invalid && message.touched"  class="form-control"
+          required minlength="10"></textarea>
+            <div class="error" *ngIf="message.invalid && message.touched">
+                <small *ngIf="message.errors?.['required']" [ngStyle]="{color:'red'}" >Message is required.</small>
+                <small *ngIf="message.errors?.['minlength']" [ngStyle]="{color:'red'}" >Message must be at least 10 characters long.</small>
+            </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="file-upload">Upload files (If Any)</label>
+          <input type="file" id="file-upload" name="fileUpload">
+        </div>
+      
+        <button type="submit" [disabled]="userForm.invalid">Submit</button>
+    </form>
+   
+    <!-- simple html form -->
+      <!-- <form class="contact-form">
+        <h2>Contact Us</h2>
+        <div class="form-group">
+            <input type="text" placeholder="Full Name*"  id="full-name" name="full-name" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" placeholder="phone*"id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="email*" id="email" name="email" required>
+        </div>
+      
+        <div class="form-group">
+            <textarea id="message" placeholder="Type Your Message Here*"  name="message" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="file-upload">Upload files (If Any)</label>
+            <input type="file" placeholder="Upload files (If Any)" id="file-upload" name="file-upload">
+        </div>
+       
+        
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <!--right Contact Info -->
+   
+</div>
+
+<!-- <div class="contact-info">
+    <h3>Don't do it alone, bring a sidekick along.</h3>
+
+    <div class="locations">
+        <h3>Our Offices</h3>
+        <div class="location">
+            <h4>Palanpur</h4>
+            <p>3rd Floor, "SAMUDRA", Suresh Mehta Chawk, Ambica Nagar Road, Palanpur. 385 001. Banaskantha. Gujarat. India.</p>
+            <p>Phone: +91 9925044205</p>
+            
+        </div>
+        <div class="location">
+            <h4>Ahmedabad</h4>
+            <p>210 - i-Square , Nr. CIMS Hospital Circle, Science City Road, Sola, Ahmedabad-380060</p>
+            <p>Phone: +91 8401650907</p>
+          
+        </div>
+        <div class="location">
+            <h4>Patna</h4>
+            <p>Vinay Niwas, CID Club Gali,Karbigahiya, Near Patna Junction, Patna, Bihar-800001</p>
+            <p>Phone: +91 6203226963</p>
+        </div>
+    </div>
+
+    
+</div> -->

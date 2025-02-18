@@ -1,0 +1,199 @@
+.contactUs-img-container {
+    position: relative;
+    width: 100%;
+    max-height: 400px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .contactUs-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container */
+    display: block;
+  }
+  
+  /* Optional: Adding a dark gradient overlay for better text readability */
+  .contactUs-img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  /* form component */
+
+  /* General Styles */
+.contact-us {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Spacing between the form and contact info */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #172983;
+    width: 100%;
+    font-weight: 600 !important;
+    font-size: 36px !important;
+    position: relative;
+    display: inline-block;
+}
+
+/* Right side - Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 32px 0 16px;
+    flex: 1; /* Flex property applied */
+    min-width: 48%;
+    border-left: 1px solid rgb(156, 156, 156);
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px 40px;
+    align-self: center;
+    background-color: #172983;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3d53be;
+}
+
+/* Left side - Contact Info */
+/* ------------------ Head Contact Info Section ------------------ */
+.Head-contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 48%;
+    font-size: 16px;
+    color: #333;
+    gap: 15px; /* Adds spacing between elements */
+    padding: 20px;
+}
+
+.Head-contact-info h3 {
+    color: #172983;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+/* ------------------ Contact Card Styling ------------------ */
+.card {
+    display: flex;
+    flex-direction: row;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+   
+    width: 100%;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Contact Info */
+.location {
+    flex: 1;
+}
+
+.location h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #172983;
+}
+
+.location p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ------------------ Mobile & Tablet Responsiveness ------------------ */
+@media (max-width: 845px) {
+    .contact-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Head-contact-info {
+        display: none; /* Hide contact info on mobile */
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+}
+
+@media (min-width: 846px) and (max-width: 1024px) {
+    .contact-us {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .Head-contact-info,
+    .contact-form {
+        flex: 1;
+        min-width: 48%;
+    }
+}
