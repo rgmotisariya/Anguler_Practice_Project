@@ -1,0 +1,35 @@
+<div class="navbar-container">
+  <div class="navbar-content">
+    <!-- Logo -->
+    <a routerLink="/" class="navbar-logo">
+      <img src="SamudraLogo.png" alt="SamudraTech Logo" class="logo-img">
+    </a>
+
+    <!-- Desktop Menu --> 
+    <div class="menu-desktop">
+      <ul class="menu-list">
+        <li *ngFor="let menu of menuList" class="menu-item">
+          <a  [routerLink]="menu.link"  routerLinkActive="active" class="menu-link">
+            <p class="menu-text">{{ menu.name }}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+ 
+ <!-- Mobile Menu Button -->
+    <button class="menu-toggle" *ngIf="mobileScreen" (click)="toggleMobileMenu()">
+      ☰
+    </button>
+  
+   <!-- Mobile Menu Dropdown -->
+  <div *ngIf="mobileScreen && showMobileMenu" class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li *ngFor="let menu of menuList" class="mobile-menu-item">
+        <a   [routerLink]="menu.link" routerLinkActive="active" class="mobile-menu-link"  (click)="closeMenuOnSelection()">{{ menu.name }}</a>
+      </li>
+    </ul>
+  </div>  
+
+ 
+  </div>
+</div>

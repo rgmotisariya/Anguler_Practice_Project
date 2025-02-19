@@ -1,0 +1,153 @@
+/* Navbar - Sticky at Top */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(5px); 
+  padding: 10px 20px;
+  border-bottom: 1px solid #172983;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add background and shadow when scrolling */
+.navbar-container.scrolled {
+  background:transparent; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+/* Adjust body padding to prevent content from being hidden behind navbar */
+body {
+  padding-top: 60px; 
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+/* Logo Styling */
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Desktop Menu */
+.menu-desktop {
+  display: flex;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin-left: 30px;
+  position: relative;
+}
+
+.menu-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-text {
+  font-size: 16px;
+  color: #172983;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.menu-link:hover .menu-text,
+.menu-link:focus .menu-text {
+  color: #172983;
+}
+
+/* Menu Underline Animation */
+.menu-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #172983;
+  transition: width 0.3s ease;
+  bottom: -1px;
+  left: 0;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    
+  }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top:55px;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.95);
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+  z-index: 100;
+}
+a.active{
+  color: red;
+}
+.mobile-menu-list {
+  list-style: none;
+  padding: 0
+}
+
+.mobile-menu-item {
+  margin: 10px 0;
+}
+
+.mobile-menu-link {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+  color: #f8f5f5;
+}

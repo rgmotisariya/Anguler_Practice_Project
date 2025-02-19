@@ -1,0 +1,29 @@
+<!-- Services Section -->
+<section class="services-container">
+  <!-- Left Side - Service List -->
+  <div class="services_left">
+    <h2>Our Services</h2>
+    <div class="services_list">
+      <a *ngFor="let service of services" 
+         href="javascript:void(0);" 
+         (click)="setActiveService(service)"
+         [class.active]="activeService.title === service.title">
+        {{ service.title }} 
+      </a>
+    </div>
+  </div>
+
+  <!-- Right Side - Active Service Details -->
+  <div class="services_right" [ngStyle]="{ 
+  'background-image': 'radial-gradient(circle,rgba(22, 22, 22, 0.39) 5%, rgb(165 165 165 / 25%) 30%, rgb(255 255 255) 90%), url(' + activeService.image + ')' 
+}">
+  <h4>{{ activeService.title }}</h4>
+  <p>{{ activeService.description }}</p>
+  <div class="btn_container">
+    <a target="_blank" href="#" class="custom-btn">Explore All</a>
+  </div>
+</div>
+
+
+  
+</section>
