@@ -13,7 +13,7 @@ export class HomeOurServicesComponent {
     {
       title: 'Web Development',
       description: 'Our meticulous approach to creating web applications places us among the top web application development services. We have developed numerous web applications by thoroughly understanding and addressing our clients\' requirements.',
-      image: '01-Services (1).png'
+      image: '01-Services.png'
     },
     {
       title: 'Mobile App Development',
