@@ -6,7 +6,7 @@
   }
   
   .contactUs-img-container img {
-    width: 100%;
+    width: 100%; 
     height: auto;
     object-fit: cover; /* Ensures the image covers the container */
     display: block;
@@ -33,6 +33,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     gap: 30px; /* Spacing between the form and contact info */
     background-color: #f4f4f4;
     border-radius: 8px;
@@ -59,7 +60,7 @@ h2 {
     align-items: flex-start;
     padding: 0 32px 0 16px;
     flex: 1; /* Flex property applied */
-    min-width: 48%;
+    width: 50%;
     border-left: 1px solid rgb(156, 156, 156);
 }
 
@@ -107,11 +108,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    min-width: 48%;
+    width: 50%;
     font-size: 16px;
     color: #333;
-    gap: 15px; /* Adds spacing between elements */
+    gap: 15px; 
     padding: 20px;
 }
 
@@ -125,11 +125,9 @@ button:hover {
 /* ------------------ Contact Card Styling ------------------ */
 .card {
     display: flex;
-    flex-direction: row;
-    background: #f9f9f9;
+    flex-direction: row; 
     padding: 15px;
     border-radius: 8px;
-   
     width: 100%;
     gap: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -137,7 +135,6 @@ button:hover {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -166,7 +163,7 @@ button:hover {
 }
 
 /* ------------------ Mobile & Tablet Responsiveness ------------------ */
-@media (max-width: 845px) {
+/* @media (max-width: 845px) {
     .contact-us {
         display: flex;
         flex-direction: column;
@@ -175,7 +172,7 @@ button:hover {
     }
 
     .Head-contact-info {
-        display: none; /* Hide contact info on mobile */
+        display: none; 
     }
 
     .contact-form {
@@ -196,4 +193,4 @@ button:hover {
         flex: 1;
         min-width: 48%;
     }
-}
+} */

@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule],
   templateUrl: './contactus.component.html',
   styleUrl: './contactus.component.css'
-}) 
+})  
 export class ContactusComponent {
   user = {
     fullName: '',
