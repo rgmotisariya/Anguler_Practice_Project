@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-contactus',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,MatIconModule],
   templateUrl: './contactus.component.html',
   styleUrl: './contactus.component.css'
 })  

@@ -5,9 +5,9 @@
 
     <!-- TDF -->
      <!-- {{userForm.value | json }} -->
-
-    <form class="contact-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
         <!-- {{userForm.form.valid}} -->
+
+     <form class="contact-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
         <h2>Contact Us</h2>
       
         <div class="form-group ">
@@ -15,7 +15,7 @@
           <div class="error" *ngIf="fullName.invalid && fullName.touched">
             <small *ngIf="fullName.errors?.['required']" [ngStyle]="{color:'red'}">Full Name is required.</small>
             <small *ngIf="fullName.errors?.['minlength']"  [ngStyle]="{color:'red'}">Full Name must be at least 3 characters long.</small>
-         </div>
+         </div> 
           <!-- {{name.valid}} -->
         </div>
         
@@ -54,29 +54,41 @@
     </form>
    
     <!-- simple html form -->
-      <!-- <form class="contact-form">
+      <!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
         <h2>Contact Us</h2>
         <div class="form-group">
-            <input type="text" placeholder="Full Name*"  id="full-name" name="full-name" required>
+            <input type="text" placeholder="Full Name*" formControlName="fullName">
+            <small *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="error">
+              Full Name is required (Min: 3 chars).
+            </small>
+        </div>
+       
+        <div class="form-group">
+            <input type="tel" placeholder="Phone*" formControlName="phone">
+            <small *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="error">
+            Enter a valid 10-digit phone number.
+            </small>
         </div>
         <div class="form-group">
-            <input type="tel" placeholder="phone*"id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-            <input type="email" placeholder="email*" id="email" name="email" required>
+            <input type="email" placeholder="Email*" formControlName="email">
+            <small *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+            Enter a valid email address.
+            </small>
         </div>
       
         <div class="form-group">
-            <textarea id="message" placeholder="Type Your Message Here*"  name="message" required></textarea>
+            <textarea placeholder="Type Your Message Here*" formControlName="message"></textarea>
+            <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+            Message must be at least 10 characters long.
+            </small>
         </div>
         <div class="form-group">
             <label for="file-upload">Upload files (If Any)</label>
-            <input type="file" placeholder="Upload files (If Any)" id="file-upload" name="file-upload">
+            <input type="file" id="file-upload" (change)="contactForm.patchValue({ fileUpload: $event.target.files[0] })">
         </div>
        
-        
-        <button type="submit">Submit</button>
-    </form> -->
+        <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </form>  -->
 
     <!--right Contact Info -->
     <div class="contact-info">

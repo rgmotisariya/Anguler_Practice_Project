@@ -6,7 +6,7 @@
   }
   
   .contactUs-img-container img {
-    width: 100%; 
+    width: 100%;  
     height: auto;
     object-fit: cover; /* Ensures the image covers the container */
     display: block;
@@ -34,7 +34,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 30px; /* Spacing between the form and contact info */
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,7 +59,7 @@ h2 {
     align-items: flex-start;
     padding: 0 32px 0 16px;
     flex: 1; /* Flex property applied */
-    width: 50%;
+    width: 45%;
     border-left: 1px solid rgb(156, 156, 156);
 }
 
@@ -108,7 +107,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 55%;
     font-size: 16px;
     color: #333;
     gap: 15px; 
@@ -117,9 +116,10 @@ button:hover {
 
 .Head-contact-info h3 {
     color: #172983;
-    font-weight: 700;
+    font-weight: 650;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 24px;
+    padding-left: 20px;
 }
 
 /* ------------------ Contact Card Styling ------------------ */
@@ -127,15 +127,17 @@ button:hover {
     display: flex;
     flex-direction: row; 
     padding: 15px;
-    border-radius: 8px;
     width: 100%;
     gap: 20px;
+    background: transparent;
+    border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 /* Logo */
@@ -163,7 +165,7 @@ button:hover {
 }
 
 /* ------------------ Mobile & Tablet Responsiveness ------------------ */
-/* @media (max-width: 845px) {
+@media (max-width: 845px) {
     .contact-us {
         display: flex;
         flex-direction: column;
@@ -172,25 +174,35 @@ button:hover {
     }
 
     .Head-contact-info {
-        display: none; 
+      width: 80%;
+    }
+    .Head-contact-info h3{
+        text-align: center;
     }
 
     .contact-form {
-        width: 90%;
+        width: 80%;
+        border: none;
     }
 }
-
-@media (min-width: 846px) and (max-width: 1024px) {
+@media (max-width: 845px) {
     .contact-us {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
-    .Head-contact-info,
-    .contact-form {
-        flex: 1;
-        min-width: 48%;
+    .Head-contact-info {
+      width: 100%;
     }
-} */
+    .Head-contact-info h3{
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        border: none;
+        
+    }
+}

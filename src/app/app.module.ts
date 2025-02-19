@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core";
 import {AppRoutes ,routingComponent} from './app.routes';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
     declarations:[
@@ -11,7 +13,9 @@ import { FormsModule } from '@angular/forms';
     imports:[
         BrowserModule,
         AppRoutes,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule,
+        MatIconModule
     ],
     providers:[],
     bootstrap:[]
