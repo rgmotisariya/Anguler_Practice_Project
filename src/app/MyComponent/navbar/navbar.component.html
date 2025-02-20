@@ -19,43 +19,35 @@
           
           <!-- No Submenu (Direct Links) -->
           <ng-container *ngIf="!menu.subMenu">
-            
-            <button mat-button [routerLink]="menu.link"  routerLinkActive="active" class="menu-link">
+            <a mat-button [routerLink]="menu.link" routerLinkActive="active" class="menu-link">
               <p class="menu-text">{{ menu.name }}</p>
-            </button>
+            </a>
           </ng-container>
 
           <!-- Dropdown Menus -->
           <ng-container *ngIf="menu.subMenu">
-            
-            <button mat-button [matMenuTriggerFor]="menuRef" matTooltipPosition="below">
+            <a mat-button [matMenuTriggerFor]="menuRef" >
               <p class="menu-text">{{ menu.name }}</p>
               <mat-icon>expand_more</mat-icon>
-            </button>
+            </a>
 
-            <mat-menu #menuRef="matMenu" (mouseenter)="menuRef.openMenu()" (mouseleave)="menuRef.closeMenu()">
+            <mat-menu  #menuRef="matMenu">
 
               <ng-container class="dropdown" *ngFor="let subItem of menu.subMenu">
                 <!-- Second-Level Menu -->
-                <button *ngIf="!subItem.subMenu" mat-menu-item [routerLink]="subItem.link">
+                <a *ngIf="!subItem.subMenu" mat-menu-item [routerLink]="subItem.link"  routerLinkActive="active" class="menu-link">
                   {{ subItem.name }}
-                </button>
-               
-
+                </a>
 
                 <!-- Third-Level Nested Menu -->
-                <button *ngIf="subItem.subMenu" mat-menu-item [matMenuTriggerFor]="nestedMenuRef" (mouseover)="nestedMenuRef.openMenu()">
-
+                <a *ngIf="subItem.subMenu" mat-menu-item [matMenuTriggerFor]="nestedMenuRef"  [routerLink]="subItem.link"  routerLinkActive="active" class="menu-link">
                   {{ subItem.name }}
-                  
-                </button>
+                </a>
 
-                
-                <mat-menu #nestedMenuRef="matMenu" (mouseleave)="nestedMenuRef.closed.emit()">
-
-                  <button *ngFor="let nestedItem of subItem.subMenu" mat-menu-item [routerLink]="nestedItem.link">
+                <mat-menu #nestedMenuRef="matMenu">
+                  <a *ngFor="let nestedItem of subItem.subMenu" mat-menu-item [routerLink]="nestedItem.link">
                     {{ nestedItem.name }}
-                  </button>
+                  </a>
                 </mat-menu>
 
               </ng-container>

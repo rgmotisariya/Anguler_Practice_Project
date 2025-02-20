@@ -58,11 +58,6 @@
   position: relative;
 }
 
-.menu-item:hover mat-menu {
-  display: block !important;
-  opacity: 1;
-  visibility: visible;
-}
 
 .menu-link {
   text-decoration: none;

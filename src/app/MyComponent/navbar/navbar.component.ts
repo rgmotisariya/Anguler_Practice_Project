@@ -1,16 +1,15 @@
-import { Component, HostListener ,ViewChild} from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuTrigger } from '@angular/material/menu';
 
 // Define the structure of a menu item
 interface MenuItem {
   id?: number;
   name: string;
-  link?: string; 
+  link?: string;
   subMenu?: MenuItem[]; // Optional submenu (for dropdowns)
 }
 
@@ -22,14 +21,6 @@ interface MenuItem {
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  
-  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
-
-  closeMenuWithDelay(menuTrigger: MatMenuTrigger) {
-    setTimeout(() => {
-      menuTrigger.closeMenu();
-    }, 300); // Add slight delay to prevent flickering
-  }
   mobileScreen=false;
   showMobileMenu = false;
 
@@ -76,19 +67,20 @@ export class NavbarComponent {
     ]},
     { id: 3, name: 'Products', subMenu: [
         { name: 'Software & Solutions', subMenu: [
-            { name: 'ERP Software', link: '/products/software/erp' },
-            { name: 'CRM Software', link: '/products/software/crm' }
+            { name: ' RTOMS', link: '/products/software/RTOMS' },
+            { name: 'Software AMCS', link: '/products/software/AMCS' },
+            { name: 'SMPS', link: '/products/software/SMPS' },
+            { name: 'Dairy ERP', link: '/products/software/Dairy-ERP' },
+            { name: 'SDMS', link: '/products/software/SDMS' },
+            { name: 'Software POS', link: '/products/software/POS' }
         ]},
+       
         { name: 'Hardware Solutions', subMenu: [
             { name: 'IoT Devices', link: '/products/hardware/iot' },
             { name: 'Embedded Systems', link: '/products/hardware/embedded' }
         ]}
     ]},
-    { id: 4, name: 'Services', subMenu: [
-        { name: 'Web Development', link: '/services/web' },
-        { name: 'Mobile App Development', link: '/services/mobile' },
-        { name: 'IoT Solutions', link: '/services/iot' }
-    ]},
+    { id: 4, name: 'Services', link: '/service' },
     { id: 5, name: 'Gallery', link: '/gallery' },
     { id: 6, name: 'Contact Us', link: '/contactus' }
   ];
