@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule} from '@angular/common';
 import { HomeHeaderComponent } from './HomeComponents/home-header/home-header.component';
 import { HomeOurServicesComponent } from './HomeComponents/home-our-services/home-our-services.component';
 import { HomeLogoSliderComponent } from './HomeComponents/home-logo-slider/home-logo-slider.component';
@@ -9,7 +8,7 @@ import { HomeClientReviewComponent } from './HomeComponents/home-client-review/h
 import { ContactUsComponent } from '../../MyComponent/contact-us/contact-us.component';
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,
+  imports: [
     HomeHeaderComponent,
     HomeOurServicesComponent,
     HomeLogoSliderComponent,
