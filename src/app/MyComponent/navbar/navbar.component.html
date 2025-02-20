@@ -19,6 +19,7 @@
           
           <!-- No Submenu (Direct Links) -->
           <ng-container *ngIf="!menu.subMenu">
+            
             <button mat-button [routerLink]="menu.link"  routerLinkActive="active" class="menu-link">
               <p class="menu-text">{{ menu.name }}</p>
             </button>
@@ -26,26 +27,32 @@
 
           <!-- Dropdown Menus -->
           <ng-container *ngIf="menu.subMenu">
-            <button mat-button [matMenuTriggerFor]="menuRef">
+            
+            <button mat-button [matMenuTriggerFor]="menuRef" matTooltipPosition="below">
               <p class="menu-text">{{ menu.name }}</p>
               <mat-icon>expand_more</mat-icon>
             </button>
 
-            <mat-menu  #menuRef="matMenu">
+            <mat-menu #menuRef="matMenu" (mouseenter)="menuRef.openMenu()" (mouseleave)="menuRef.closeMenu()">
 
               <ng-container class="dropdown" *ngFor="let subItem of menu.subMenu">
                 <!-- Second-Level Menu -->
                 <button *ngIf="!subItem.subMenu" mat-menu-item [routerLink]="subItem.link">
                   {{ subItem.name }}
                 </button>
+               
+
 
                 <!-- Third-Level Nested Menu -->
-                <button *ngIf="subItem.subMenu" mat-menu-item [matMenuTriggerFor]="nestedMenuRef">
+                <button *ngIf="subItem.subMenu" mat-menu-item [matMenuTriggerFor]="nestedMenuRef" (mouseover)="nestedMenuRef.openMenu()">
+
                   {{ subItem.name }}
                   
                 </button>
 
-                <mat-menu #nestedMenuRef="matMenu">
+                
+                <mat-menu #nestedMenuRef="matMenu" (mouseleave)="nestedMenuRef.closed.emit()">
+
                   <button *ngFor="let nestedItem of subItem.subMenu" mat-menu-item [routerLink]="nestedItem.link">
                     {{ nestedItem.name }}
                   </button>

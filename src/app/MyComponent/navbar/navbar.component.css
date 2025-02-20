@@ -11,7 +11,7 @@
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
-
+ 
 /* Add background and shadow when scrolling */
 .navbar-container.scrolled {
   background:transparent; 
@@ -55,8 +55,13 @@
 }
 
 .menu-item {
-  
   position: relative;
+}
+
+.menu-item:hover mat-menu {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu-link {
@@ -97,7 +102,7 @@
   font-size: 18px;
   vertical-align: middle;
 }
-.dropdown {
+.cdk-overlay-pane {
   background-color: white;
 }
 

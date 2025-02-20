@@ -1,15 +1,16 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener ,ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 // Define the structure of a menu item
 interface MenuItem {
   id?: number;
   name: string;
-  link?: string;
+  link?: string; 
   subMenu?: MenuItem[]; // Optional submenu (for dropdowns)
 }
 
@@ -21,6 +22,14 @@ interface MenuItem {
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  
+  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
+
+  closeMenuWithDelay(menuTrigger: MatMenuTrigger) {
+    setTimeout(() => {
+      menuTrigger.closeMenu();
+    }, 300); // Add slight delay to prevent flickering
+  }
   mobileScreen=false;
   showMobileMenu = false;
 

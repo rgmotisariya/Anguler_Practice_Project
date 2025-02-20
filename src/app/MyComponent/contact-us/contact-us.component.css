@@ -110,6 +110,9 @@ button:hover {
 .location p {
     margin: 5px 0;
 }
+/* .error{
+    color: red;
+} */
 
 /* Mobile & Tablet Responsiveness */
 @media (max-width: 845px) {
