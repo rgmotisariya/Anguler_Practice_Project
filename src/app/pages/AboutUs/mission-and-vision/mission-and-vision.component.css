@@ -1,0 +1,402 @@
+/* Container */
+.first-img-container {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/* Image */
+.mission-vision-image {
+    width: 100%;
+    height: 24rem; /* Default height */
+    object-fit: cover;
+    background-position: center;
+}
+
+/* Text Position */
+.mission-vision-text {
+    position: absolute;
+    top: 33%; 
+    left: 3.5rem;
+    text-align: center;
+}
+
+/* Text Style */
+.mission-vision-text span {
+    font-weight: bold;
+    color: white;
+    font-size: 3.5rem; /* Default size */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {  /* Tablet */
+    .mission-vision-text {
+        top: 30%;
+        left: 2rem;
+    }
+    .mission-vision-text span {
+        font-size: 2.5rem;
+    }
+    .mission-vision-image {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 768px) {  /* Mobile */
+    .mission-vision-text {
+        top: 25%;
+        left: 1rem;
+    }
+    .mission-vision-text span {
+        font-size: 2rem;
+    }
+    .mission-vision-image {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 480px) {  /* Small Mobile */
+    .mission-vision-text {
+        top: 20%;
+        left: 0.5rem;
+    }
+    .mission-vision-text span {
+        font-size: 1.5rem;
+    }
+    .mission-vision-image {
+        height: 15rem;
+    }
+}
+
+/*  ------------------info section ---------------------- */
+
+/* Mission Info Section */
+.mission-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 5%;
+    background-color: #f8f9fa;
+}
+
+/* Text Section */
+.info {
+    flex: 1;
+    max-width: 60%;
+}
+
+.info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Image Section */
+.info-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.info-img-container img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mission-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        max-width: 90%;
+    }
+
+    .info-img-container img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-info {
+        padding: 2rem 3%;
+    }
+
+    .info {
+        max-width: 100%;
+    }
+
+    .info-img-container img {
+        max-width: 100%;
+    }
+}
+
+
+/* --------------two cards section --------------------- */
+
+.team-milestone-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 5%;
+    background-color: #F5F5F5;
+}
+
+@media (min-width: 768px) {
+    .team-milestone-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.team-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.team-card:hover {
+    border-color: #005AA7;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+}
+
+.icon {
+    font-size: 100px !important;
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+.team-card:hover .icon {
+    color: #005AA7;
+}
+
+.title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.description {
+    color: #6D6D6D;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+
+/* --------------mission and vision cards------------------ */
+.mission-vision-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    padding: 2rem 5%;
+    background-color: #F5F5F5;
+}
+
+/* Styling for Mission and Vision Cards */
+.mission, .vision {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* Image Styling */
+.mission img, .vision img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text Overlay */
+.mission-text, .vision-text {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    max-width: 50%;
+    text-align: center;
+ 
+}
+
+.mission-text {
+    right: 5%;
+}
+
+.vision-text {
+    left: 5%;
+}
+
+/* Text Styling */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2c458a;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mission-text, .vision-text {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-container {
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    .mission, .vision {
+        text-align: center;
+        
+    }
+
+    .mission img, .vision img {
+        width: 90%;
+    }
+
+    .mission-text, .vision-text {
+      
+        background: none;
+        width: 50%;
+        text-align: center;
+        max-width: 100%;
+        padding: 1rem;  
+        box-shadow: none;
+    }
+    h2{
+        font-size:1.5rem ;
+    }
+    h5{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 510px) {
+    .mission-vision-container {
+        padding: 1rem 0;
+    }
+    .mission-text, .vision-text {       
+        width: 60%;  
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: .6rem;
+    }
+}
+@media (max-width: 390px) {
+    .mission-vision-container {
+        padding: 1rem;
+    }
+    h2 {
+        font-size: .7rem;
+        margin-bottom: 0.2rem;
+    }
+    h5 {
+        font-size: .5rem;
+    }
+}
+
+/* -----------milestone-------------- */
+
+.milestone-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #ffffff, #c6cfdd, #ffffff);
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 600;
+    color: black;
+    text-align: center;
+  }
+  
+  /* Description styling */
+  .description {
+    font-size: 1.125rem; /* 18px */
+    text-align: center;
+    color: #6d6d6d;
+    max-width: 800px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .milestone-container {
+      padding: 3rem 1rem;
+    }
+  
+    .title {
+      font-size: 1.75rem; /* 28px */
+    }
+  
+    .description {
+      font-size: 1rem; /* 16px */
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .milestone-container {
+      padding: 2rem 1rem;
+    }
+  
+    .title {
+      font-size: 1.5rem; /* 24px */
+    }
+  
+    .description {
+      font-size: 0.9rem; /* 14px */
+      max-width: 95%;
+    }
+  }
+  
+  
