@@ -69,94 +69,197 @@
     }
 }
 
-/* ------------team member section -------------- */
+/* ----------our team----------------*/
 .executive-team {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    background: rgb(231, 231, 250);
-    border-radius: 30px;
-  }
-  
-  h2{
-    font: bold;
-    font-weight: 650;
-    color: rgb(16, 16, 126);
-  }
-  .executive-list {
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background: rgb(231, 231, 250);
+  border-radius: 30px;
 }
+
+/* Heading */
+h2 {
+  font: bold;
+  font-weight: 650;
+  color: rgb(16, 16, 126);
+}
+
+/* Executive List */
+.executive-list {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Card Styling */
+.executive-card {
+  gap: 2rem;
+  width: 450px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.executive-card:hover {
+  transform: scale(1.05);
+}
+
+/* Executive Box */
+.executive-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Image Box */
+.img-box {
+  position: relative;
+  width: 150px;
+  height: 100%;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: rgb(41, 41, 85);
+}
+
+.executive-profile {
+  width: 100%;
+  height: 100%;  
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.linkedin-profile {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/* Content Box */
+.contain-box {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contain-box .my-3 {
+  margin: 10px 0;
+  font-size: 14px;
+  text-align: left;
+  color: #666;
+}
+
+/* Designation */
+.executive-designation {
+  border-left: #F6A21C 3px solid;
+  padding-left: 1rem;
+}
+
+.executive-designation h3 {
+  color: #0d2f5d;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.text-capitalize {
+  font-size: 15px;
+  color: #333;
+  text-align: left;
+  line-height: 22px;
+  margin: 0;
+}
+
+/* ====== RESPONSIVE STYLES ====== */
+
+/* Large Tablets (Max-width: 1024px) */
+@media (max-width: 1024px) { 
   
   .executive-card {
-    display: flex;
-    gap: 2rem;
-    
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+      max-width: 400px;
   }
-  
-  .executive-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .executive-card img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  .executive-box {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
-  }
-  
+
   .img-box {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
+      width: 130px;
   }
-  
-  .executive-profile {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+
+  .contain-box .my-3 {
+      font-size: 13px;
   }
-  
-  .linkedin-profile {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .contain-box {
-    flex: 1;
-  }
-  
-  p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #666;
-  }
-  
+
   .executive-designation h3 {
-    color: #F6A21C;
-    font-size: 18px;
-    margin-bottom: 5px;
+      font-size: 16px;
   }
-  
-  .executive-designation span {
-    font-size: 14px;
-    color: #333;
+
+  .text-capitalize {
+      font-size: 14px;
   }
-  
+}
+@media (max-width: 905px){
+  .executive-team h2 {
+      font-size: 1.8rem;
+  }
+
+  .executive-box {
+      gap: 15px;
+  }
+
+  .executive-card {
+    max-width:100%;
+}
+}
+
+/* Tablets (Max-width: 768px) */
+@media (max-width: 768px) {  
+  .executive-team h2 {
+      font-size: 1.8rem;
+  }
+
+  .executive-box {
+      gap: 15px;
+  }
+
+  .executive-card {
+      padding: 15px;
+  }
+
+  .img-box {
+      width: 120px;
+  }
+
+  .linkedin-profile {
+      width: 25px;
+      height: 25px;
+  }
+}
+
+/* ----for mobile view---- */
+@media (max-width: 575px) {  
+  .executive-team h2 {
+      font-size: 1.8rem;
+  }
+
+  .executive-box {
+      gap: 15px;
+  }
+
+  .executive-card {
+      max-width: 300px;
+      padding: 15px;
+  }
+
+  .img-box {
+      width: 100%;
+  }
+
+  .linkedin-profile {
+      width: 25px;
+      height: 25px;
+  }
+}

@@ -9,7 +9,7 @@ interface Executive {
   description: string;
 }
 
-@Component({
+@Component({ 
   selector: 'app-our-team',
   standalone:true,
   imports: [CommonModule],
@@ -21,31 +21,37 @@ interface Executive {
 export class OurTeamComponent {
   executives: Executive[] = [
     {
-      name: 'Pranjal Mehta',
-      position: 'Managing Director',
-      imageUrl: 'https://www.zealousys.com/wp-content/themes/zealous/images/company/our-team/pranjal-mehta.webp',
-      linkedinUrl: 'https://www.linkedin.com/in/pranjal-mehta-56b782a/',
+      name: 'Mr. Pankaj Barot',
+      position: 'FOUNDER',
+      imageUrl: '01-team-member.jpg',
+      linkedinUrl: '01-team-member.jpg',
       description: 'The captain of the ship who is converting every challenge into business opportunities since 2008.'
     },
     {
-      name: 'Raj Kewlani',
-      position: 'Mobile Department Head',
-      imageUrl: 'https://www.zealousys.com/wp-content/themes/zealous/images/company/our-team/raj-kewlani.webp',
-      linkedinUrl: 'https://www.linkedin.com/in/rajkewlani/',
+      name: 'Mr. Paresh Barot',
+      position: 'CEO',
+      imageUrl:  '02-team-member.jpg',
+      linkedinUrl: '02-team-member.jpg',
       description: 'Disrupting the world with the help of innovative, intuitive, and futuristic mobile solutions.'
     },
     {
-      name: 'Ruchir Shah',
-      position: 'Microsoft Department Head',
-      imageUrl: 'https://www.zealousys.com/wp-content/themes/zealous/images/company/our-team/ruchir-shah.webp',
-      linkedinUrl: 'https://www.linkedin.com/in/ruchirce/',
+      name: 'Mr. Parth Barot',
+      position: 'TEAM LEAD (IT)',
+      imageUrl:  '03-team-member.jpg',
+      linkedinUrl: '03-team-member.jpg',
       description: 'A true applied scientist that architects dreams into profitable and innovative technology solutions.'
     },
     {
-      name: 'Sandeep Shah',
-      position: 'Open Source Department Head',
-      imageUrl: 'https://www.zealousys.com/wp-content/themes/zealous/images/company/our-team/sandeep-shah.webp',
-      linkedinUrl: 'https://www.linkedin.com/in/sandip-shah-14a279178/',
+      name: 'Mr. Pravin Parmar',
+      position: 'OIN CHARGE HARDWARE',
+      imageUrl: '04-team-member.jpg',
+      linkedinUrl: '04-team-member.jpg',
+      description: 'Illuminating the path of businesses with his in-depth and unbeatable knowledge of LAMP technologies.'
+    }, {
+      name: 'Mrs. Madhvi Rao',
+      position: 'BUSINESS ANALYST',
+      imageUrl:  '05-team-member.jpg',
+      linkedinUrl: '05-team-member.jpg',
       description: 'Illuminating the path of businesses with his in-depth and unbeatable knowledge of LAMP technologies.'
     }
   ];
