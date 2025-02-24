@@ -1,32 +1,69 @@
-.service-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
+.first-img-container {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 
-  .title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
+/* Image */
+.mission-vision-image {
+  width: 100%;
+  height: 24rem; /* Default height */
+  object-fit: cover;
+  background-position: center;
+}
 
-  .description {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
+/* Text Position */
+.mission-vision-text {
+  position: absolute;
+  top: 33%; 
+  left: 3.5rem;
+  text-align: center;
+}
 
-  .service-list {
-    list-style: none;
-    padding: 0;
-  }
+/* Text Style */
+.mission-vision-text span {
+  font-weight: bold;
+  color: rgb(36, 86, 179);
+  font-size: 3.5rem; /* Default size */
+}
 
-  .service-item {
-    background: #f0f0f0;
-    margin: 10px auto;
-    padding: 10px 15px;
-    width: 80%;
-    border-radius: 8px;
-    text-align: left;
-    font-size: 1rem;
+/* Responsive Design */
+@media (max-width: 1024px) {  /* Tablet */
+  .mission-vision-text {
+      top: 30%;
+      left: 2rem;
   }
+  .mission-vision-text span {
+      font-size: 2.5rem;
+  }
+  .mission-vision-image {
+      height: 20rem;
+  }
+}
+
+@media (max-width: 768px) {  /* Mobile */
+  .mission-vision-text {
+      top: 25%;
+      left: 1rem;
+  }
+  .mission-vision-text span {
+      font-size: 2rem;
+  }
+  .mission-vision-image {
+      height: 18rem;
+  }
+}
+
+@media (max-width: 480px) {  /* Small Mobile */
+  .mission-vision-text {
+      top: 20%;
+      left: 0.5rem;
+  }
+  .mission-vision-text span {
+      font-size: 1.5rem;
+  }
+  .mission-vision-image {
+      height: 15rem;
+  }
+}

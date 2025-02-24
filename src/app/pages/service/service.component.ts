@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './service.component.css'
 })
 export class ServiceComponent {
-  services: string[] = ['Web Development', 
-    'Mobile App Development', 'Cloud Integration', 'UI/UX Design', 'Digital Marketing'];
+  services:  [
+    {}
+  ];
 }
