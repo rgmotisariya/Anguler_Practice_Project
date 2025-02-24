@@ -8,73 +8,59 @@
     <!-- Desktop Menu --> 
     <div class="menu-desktop">
       <ul class="menu-list">
-
-        <!-- <li *ngFor="let menu of menuList" class="menu-item">
-          <a  [routerLink]="menu.link"  routerLinkActive="active" class="menu-link">
-            <p class="menu-text">{{ menu.name }}</p>
-          </a>
-        </li> -->
-
         <li *ngFor="let menu of menuList" class="menu-item">
-          
           <!-- No Submenu (Direct Links) -->
-          <ng-container *ngIf="!menu.subMenu">
+          <ng-container *ngIf="!menu.subMenu" >
             <a mat-button [routerLink]="menu.link" routerLinkActive="active" class="menu-link">
               <p class="menu-text">{{ menu.name }}</p>
             </a>
           </ng-container>
 
           <!-- Dropdown Menus -->
-          <ng-container *ngIf="menu.subMenu">
+          <ng-container *ngIf="menu.subMenu" >
+
             <a mat-button [matMenuTriggerFor]="menuRef" >
               <p class="menu-text">{{ menu.name }}</p>
               <mat-icon>expand_more</mat-icon>
             </a>
 
-            <mat-menu  #menuRef="matMenu">
-
-              <ng-container class="dropdown" *ngFor="let subItem of menu.subMenu">
+            <mat-menu #menuRef="matMenu"  >
+              <ng-container *ngFor="let subItem of menu.subMenu" >
                 <!-- Second-Level Menu -->
-                <a *ngIf="!subItem.subMenu" mat-menu-item [routerLink]="subItem.link"  routerLinkActive="active" class="menu-link">
+                <button *ngIf="!subItem.subMenu" mat-menu-item [routerLink]="subItem.link" routerLinkActive="active" class="menu-link">
                   {{ subItem.name }}
-                </a>
+                </button>
 
                 <!-- Third-Level Nested Menu -->
-                <a *ngIf="subItem.subMenu" mat-menu-item [matMenuTriggerFor]="nestedMenuRef"  [routerLink]="subItem.link"  routerLinkActive="active" class="menu-link">
+                <button *ngIf="subItem.subMenu" mat-menu-item [matMenuTriggerFor]="nestedMenuRef">
                   {{ subItem.name }}
-                </a>
+                </button>
 
                 <mat-menu #nestedMenuRef="matMenu">
-                  <a *ngFor="let nestedItem of subItem.subMenu" mat-menu-item [routerLink]="nestedItem.link">
+                  <button *ngFor="let nestedItem of subItem.subMenu" mat-menu-item [routerLink]="nestedItem.link">
                     {{ nestedItem.name }}
-                  </a>
+                  </button>
                 </mat-menu>
-
               </ng-container>
-
             </mat-menu>
 
           </ng-container>
-
         </li>
-
       </ul>
     </div>
- 
- <!-- Mobile Menu Button -->
+
+    <!-- Mobile Menu Button -->
     <button class="menu-toggle" *ngIf="mobileScreen" (click)="toggleMobileMenu()">
       <mat-icon style="color: #172983;">menu</mat-icon>
     </button>
-  
-   <!-- Mobile Menu Dropdown -->
-  <div *ngIf="mobileScreen && showMobileMenu" class="mobile-menu">
-    <ul class="mobile-menu-list">
-      <li *ngFor="let menu of menuList" class="mobile-menu-item">
-        <a   [routerLink]="menu.link" routerLinkActive="active" class="mobile-menu-link"  (click)="closeMenuOnSelection()">{{ menu.name }}</a>
-      </li>
-    </ul>
-  </div>  
 
- 
+    <!-- Mobile Menu Dropdown -->
+    <div *ngIf="mobileScreen && showMobileMenu" class="mobile-menu">
+      <ul class="mobile-menu-list">
+        <li *ngFor="let menu of menuList" class="mobile-menu-item">
+          <a [routerLink]="menu.link" routerLinkActive="active" class="mobile-menu-link" (click)="closeMenuOnSelection()">{{ menu.name }}</a>
+        </li>
+      </ul>
+    </div>  
   </div>
 </div>

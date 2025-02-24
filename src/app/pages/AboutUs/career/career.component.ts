@@ -1,47 +1,21 @@
 import { Component } from '@angular/core';
-import { CommonModule} from '@angular/common'
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import {CareerService} from './../../../shared/career.service'
 @Component({
   standalone:true,
   selector: 'app-career',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './career.component.html',
   styleUrl: './career.component.css'
 })
 export class CareerComponent {
-  imageSrc: string = "https://www.zealousys.com/wp-content/themes/zealous/images/company/career-great-place.webp";
 
-  leftItems: string[] = [
-    "Freedom To Make Decisions & Manage Your Time",
-    "Wonderful Collaborators, Friends, and Like-minded Coworkers",
-    "Individuals Are Empowered To Grow",
-    "A Variety Of Opportunity For Leadership, Both Large & Small."
-  ];
+  positions: any[] = []; 
 
-  rightItems: string[] = [
-    "Provided Some of the Top Benefits & Perks on the Market",
-    "Opportunity To Find The Ideal Work-Life Balance",
-    "Great Cultures Begin with a Passionate Advocate's Vision",
-    "A Culture of Continuous Improvement"
-  ];
+  constructor(private careerService: CareerService) {}
 
-  positions = [
-    {
-      title: "Marketing Executive",
-      experience: "1-2 Years",
-      imageUrl: "https://www.zealousys.com/wp-content/uploads/2025/01/Marketing-Executive.png",
-      applyLink: "https://www.zealousys.com/career/marketing-executive/"
-    },
-    {
-      title: "Business Development Executive",
-      experience: "1 to 3 Years",
-      imageUrl: "https://www.zealousys.com/wp-content/uploads/2018/12/career-bde.png",
-      applyLink: "https://www.zealousys.com/career/business-development-executive/"
-    },
-    {
-      title: "Content Writer",
-      experience: "1-2 Years",
-      imageUrl: "https://www.zealousys.com/wp-content/uploads/2024/02/content-writer.png",
-      applyLink: "https://www.zealousys.com/career/content-writer/"
-    }
-  ];
+  ngOnInit() {
+    this.positions = this.careerService.getAllJobs();
+  }
 }

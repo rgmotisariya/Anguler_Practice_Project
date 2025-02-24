@@ -3,52 +3,12 @@
          alt="Flowbite Logo" 
          class="mission-vision-image">
     <div class="mission-vision-text">
-        <span>Our Team</span>
+        <span>Career</span>
     </div>
 </div>
 
-
-<!-- great place to work -->
-
-<section class="career-place-work">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="primaryColor">What Makes Us a Great Place to Work</h2>
-      </div>
-      <div class="row align-items-center">
-
-        <div class="col-lg-3 col-12">
-          <div class="d-flex justify-content-center gap-md-4 gap-3 flex-column align-items-center">
-            <p *ngFor="let leftItem of leftItems">{{ leftItem }}</p>
-            <span *ngFor="let _ of leftItems"></span>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-12">
-          <div>
-            <img width="648" height="532" 
-                 [src]="imageSrc"
-                 class="img-fluid" 
-                 alt="Career Great Place to Work">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-12">
-          <div class="d-flex justify-content-center gap-md-4 gap-3 flex-column align-items-center">
-            <p *ngFor="let rightItem of rightItems">{{ rightItem }}</p>
-            <span *ngFor="let _ of rightItems"></span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  
-
-
-
-
-  <div class="career-open-pos-main">
+<!-- open position -->
+<div class="career-open-pos-main">
     <div class="container">
       <div class="text-center">
         <h2 class="primaryColor">Open Positions</h2>
@@ -56,16 +16,19 @@
   
       <ul>
         <li *ngFor="let position of positions">
+
           <div>
             <img [src]="position.imageUrl" [alt]="position.title" width="100" height="100" />
             <h3 class="primaryColor">{{ position.title }}</h3>
           </div>
+
           <div>
             <p>Experience - {{ position.experience }}</p>
-            <a class="btn-default btn-primary" [id]="position.title" [href]="position.applyLink" target="_blank">Apply Now</a>
+            <a class="btn-default btn-primary"  [routerLink]="['/career', position.title]" > Apply Now</a>
           </div>
+
         </li>
       </ul>
     </div>
-  </div>
+</div>
   

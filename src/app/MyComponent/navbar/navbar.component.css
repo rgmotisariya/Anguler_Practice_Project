@@ -4,21 +4,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0); 
+  background: rgb(255, 255, 255); 
   backdrop-filter: blur(5px); 
   padding: 10px 20px;
   border-bottom: 1px solid #172983;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
- 
-/* Add background and shadow when scrolling */
-.navbar-container.scrolled {
-  background:transparent; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-}
-
-
 
 .navbar-content {
   max-width: 1200px;
@@ -97,9 +89,6 @@
   font-size: 18px;
   vertical-align: middle;
 }
-.cdk-overlay-pane {
-  background-color: white;
-}
 
 /* Mobile Menu Button */
 .menu-toggle {
@@ -109,6 +98,9 @@
   font-size: 24px;
   display: none;
   cursor: pointer;
+}
+.mat-menu{
+background-color: #172983;
 }
 
 @media (max-width: 804px) {

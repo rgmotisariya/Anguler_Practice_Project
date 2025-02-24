@@ -43,7 +43,7 @@ export class OurTeamComponent {
     },
     {
       name: 'Mr. Pravin Parmar',
-      position: 'OIN CHARGE HARDWARE',
+      position: 'IN CHARGE HARDWARE',
       imageUrl: '04-team-member.jpg',
       linkedinUrl: '04-team-member.jpg',
       description: 'Illuminating the path of businesses with his in-depth and unbeatable knowledge of LAMP technologies.'

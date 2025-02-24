@@ -8,6 +8,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { MissionAndVisionComponent} from './pages/AboutUs/mission-and-vision/mission-and-vision.component';
 import { OurTeamComponent} from './pages/AboutUs/our-team/our-team.component';
 import { CareerComponent} from './pages/AboutUs/career/career.component';
+import { JDComponent} from './pages/AboutUs/career/JDcomponents/jd/jd.component'
 
 import { AMCSComponent} from './pages/software-and-solutions/amcs/amcs.component'
 import { DairyERPComponent} from './pages/software-and-solutions/dairy-erp/dairy-erp.component'
@@ -25,6 +26,7 @@ export const routes: Routes = [
      { path:"about/mission",component:MissionAndVisionComponent},
      { path:"about/team",component:OurTeamComponent},
      { path:"about/career",component:CareerComponent},
+     { path:"career/:id",component:JDComponent},
 
      { path:"products/software/AMCS",component:AMCSComponent},
      { path:"products/software/Dairy-ERP",component:DairyERPComponent},

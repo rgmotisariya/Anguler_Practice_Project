@@ -1,0 +1,36 @@
+ <div class="first-img-container">
+    <img src="Career-Banner-1.jpg" 
+         alt="Flowbite Logo" 
+         class="mission-vision-image">
+    <div class="mission-vision-text">
+        <span>Current Openings</span>
+    </div>
+</div> 
+
+<div class="job-description" *ngIf="job">
+    <h2>{{ job.title }}</h2>
+    
+    <div>
+        <h3>Job Description</h3>
+            <p *ngFor="let desc of job.JobDescription">{{ desc }}</p>
+    </div>
+
+    <div>
+        <h3>Roles & Responsibilities</h3>
+        <ul>
+            <li *ngFor="let role of job.rolesResponsibilities">{{ role }}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Preferred Qualification</h3>
+        <p>{{ job.PreferredQualification }}</p>
+    </div>
+
+    <a *ngIf="job.applyLink" [href]="job.applyLink" class="btn-default btn-primary">Apply Now</a>
+</div>
+
+<div *ngIf="!job">
+    <p>Job details not found. Please check back later.</p>
+</div>
+
