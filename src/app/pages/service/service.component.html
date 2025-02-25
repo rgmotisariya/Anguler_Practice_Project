@@ -1,19 +1,25 @@
 <div class="first-img-container">
   <img src="Services-Banner.jpg" 
-       alt="Flowbite Logo" 
+       alt="Services Banner" 
        class="mission-vision-image">
   <div class="mission-vision-text">
       <span>Services</span>
   </div>
 </div>
+<div class="service-main">
+  <div 
+    *ngFor="let service of services; let i = index" 
+    class="service-container" 
+    [ngClass]="{ 'reverse': i % 2 !== 0 }">
+    
+    <div class="service-text">
+      <h2>{{ service.title }}</h2>
+      <p [innerHTML]="service.description"></p> 
+    </div>
 
-<div>
-  <div>
-    <h2>{{service.title}}</h2>
-    <p>{{service.description}}</p>
+    <div class="service-image">
+      <img [src]="service.image" alt="{{ service.title }}">
+    </div>
+
   </div>
-  <div>
-    <img src="" alt="">
-  </div>
-  
 </div>

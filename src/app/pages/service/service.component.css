@@ -67,3 +67,75 @@
       height: 15rem;
   }
 }
+
+
+/* -------------services--------------- */
+/* Main service container */
+.service-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Space between service items */
+  
+}
+
+/* Default layout (text left, image right) */
+.service-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px 40px ;
+ 
+}
+
+/* Reverse layout for even-indexed services */
+.service-container.reverse {
+  flex-direction: row-reverse;
+  background-color: rgb(215, 225, 241);
+}
+
+/* Text section */
+.service-text {
+  flex: 1;
+  padding-right: 20px;
+  white-space: pre-line;
+}
+
+.service-container.reverse .service-text {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+/* Image section */
+.service-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.service-image img {
+  width: 280px;
+  height: auto;
+ 
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-container,
+  .service-container.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-text {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .service-image img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
