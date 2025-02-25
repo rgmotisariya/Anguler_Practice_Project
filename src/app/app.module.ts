@@ -1,10 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import {AppRoutes} from './app.routes';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations:[
@@ -15,7 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
         AppRoutes,
         FormsModule,
         ReactiveFormsModule,
-        MatIconModule
+        MatIconModule,
+        RouterModule
     ],
     providers:[],
     bootstrap:[]

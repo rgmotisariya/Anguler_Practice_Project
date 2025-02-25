@@ -10,7 +10,8 @@
   <div 
     *ngFor="let service of services; let i = index" 
     class="service-container" 
-    [ngClass]="{ 'reverse': i % 2 !== 0 }">
+    [ngClass]="{ 'reverse': i % 2 !== 0 }"
+    [id]="service.title">
     
     <div class="service-text">
       <h2>{{ service.title }}</h2>

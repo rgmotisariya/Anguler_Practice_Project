@@ -8,7 +8,7 @@ export class CareerService {
     {
       title: "Full Stack Developer",
       experience: "1-2 Years",
-      imageUrl: "",
+      imageUrl: "https://www.zealousys.com/wp-content/uploads/2018/12/career-bde.png",
       JobDescription: [
         "Samudra Technologies are looking for a Full Stack Developer with 1 to 3 years of experience to build software using languages and technologies of the .NET framework, .NET Core, and JavaScript.You will create applications from scratch, configure existing systems, and provide user support.In this role, you should be able to write functional code with a sharp eye for spotting defects.You should be a team player and an excellent communicator.",
         "If you are also passionate about .NET, JavaScript, and software design/architecture, we would like to meet you.Your goal will be to work with internal teams to design, develop, and maintain software."

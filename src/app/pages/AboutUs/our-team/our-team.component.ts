@@ -25,7 +25,7 @@ export class OurTeamComponent {
       position: 'FOUNDER',
       imageUrl: '01-team-member.jpg',
       linkedinUrl: '01-team-member.jpg',
-      description: 'The captain of the ship who is converting every challenge into business opportunities since 2008.'
+      description: 'The captain of the ship who is converting every challenge into business opportunities since 1996.'
     },
     {
       name: 'Mr. Paresh Barot',

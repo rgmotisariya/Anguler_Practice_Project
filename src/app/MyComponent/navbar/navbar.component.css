@@ -158,3 +158,15 @@ a.active{
 .mobile-menu-link:hover {
   color: #f8f5f5;
 }
+
+
+/* -----------global style for background color---------------- */
+
+ 
+  
+ /* Ensure the dropdown menu appears above other content */
+ ::ng-deep .cdk-overlay-pane{
+   margin-top: 12px;
+   z-index: 1000;
+   background-color: #f7f7f7;
+ }

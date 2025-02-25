@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule ,RouterLink} from '@angular/router'; 
+
 @Component({
   selector: 'app-home-our-services',
   templateUrl: './home-our-services.component.html',
-  imports:[CommonModule],
+  imports:[CommonModule,RouterModule,RouterLink],
   styleUrls: ['./home-our-services.component.css']
 })
 export class HomeOurServicesComponent {
@@ -13,17 +15,20 @@ export class HomeOurServicesComponent {
     {
       title: 'Web Development',
       description: 'Our meticulous approach to creating web applications places us among the top web application development services. We have developed numerous web applications by thoroughly understanding and addressing our clients\' requirements.',
-      image: '01-Services.png'
+      image: '01-Services.png',
+      
     },
     {
       title: 'Mobile App Development',
       description: 'We specialize in building high-performance mobile apps tailored to your business needs. From Android to iOS, our solutions ensure smooth and efficient user experiences.',
-      image: '02-Services.png'
+      image: '02-Services.png',
+     
     },
     {
-      title: 'IoT Development',
+      title: 'IOT Development',
       description: 'Our IoT solutions enable businesses to leverage smart devices, automation, and connectivity for enhanced efficiency and innovation.',
-      image: '03-Services.png'
+      image: '03-Services.png',
+      
     }
   ];
 

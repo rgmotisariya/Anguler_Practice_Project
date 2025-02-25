@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes,RouterModule } from '@angular/router';
+import { RouterModule, Routes, ExtraOptions } from '@angular/router';
+
 import {ServiceComponent} from './pages/service/service.component'
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
@@ -18,6 +19,8 @@ import { SDMSComponent} from './pages/software-and-solutions/sdms/sdms.component
 import { SMPSComponent} from './pages/software-and-solutions/smps/smps.component'
 
 export const routes: Routes = [
+
+
      { path:"home",component:HomeComponent},
      { path:"service",component:ServiceComponent},
      { path:"gallery",component:GalleryComponent},
@@ -34,12 +37,20 @@ export const routes: Routes = [
      { path:"products/software/RTOMS",component:RTOMSComponent},
      { path:"products/software/SDMS",component:SDMSComponent},
      { path:"products/software/SMPS",component:SMPSComponent},
-];
+     
+     { path: '', redirectTo: '/home', pathMatch: 'full' }, //  Redirect empty path to home
+     { path: '**', redirectTo: '/home' },
+];   
+const routerOptions: ExtraOptions = {
+    anchorScrolling: 'enabled', //  Enables scrolling to fragments
+    scrollPositionRestoration: 'enabled', //  Ensures smooth scrolling when navigating
+    scrollOffset: [0, 50]  //  Adjusts scroll position for headers
+  };
 
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forRoot(routes,routerOptions)],
     exports:[RouterModule]
 })
 export class AppRoutes{
-
+  
 }

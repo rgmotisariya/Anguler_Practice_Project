@@ -1,0 +1,288 @@
+/* Container */
+.first-img-container {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/* Image */
+.mission-vision-image {
+    width: 100%;
+    height: 24rem; /* Default height */
+    object-fit: cover;
+    background-position: center;
+}
+
+/* Text Position */
+.mission-vision-text {
+    position: absolute;
+    top: 33%; 
+    left: 3.5rem;
+    text-align: center;
+}
+
+/* Text Style */
+.mission-vision-text span {
+    font-weight: bold;
+    color: #25408b;
+    font-size: 3.5rem; /* Default size */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {  /* Tablet */
+    .mission-vision-text {
+        top: 30%;
+        left: 2rem;
+    }
+    .mission-vision-text span {
+        font-size: 2.5rem;
+    }
+    .mission-vision-image {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 768px) {  /* Mobile */
+    .mission-vision-text {
+        top: 25%;
+        left: 1rem;
+    }
+    .mission-vision-text span {
+        font-size: 2rem;
+    }
+    .mission-vision-image {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 480px) {  /* Small Mobile */
+    .mission-vision-text {
+        top: 20%;
+        left: 0.5rem;
+    }
+    .mission-vision-text span {
+        font-size: 1.5rem;
+    }
+    .mission-vision-image {
+        height: 15rem;
+    }
+}
+/* -------info---------- */
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: #6D6D6D;
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .description-container {
+      padding: 6rem;
+    }
+  }
+  
+/* ---------------image container------------------- */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .image {
+   
+    object-fit: contain;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+  
+  @media (min-width: 640px) { /* sm:block for screens >= 640px */
+    .image {
+      display: block;
+      height: 45rem;
+    }
+  }
+  
+  /* ----------feature section----------------- */
+
+  .smps-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .smps-section {
+      padding: 6rem;
+    }
+  }
+  
+  .smps-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .smps-content {
+      flex-direction: row;
+    }
+  }
+  
+  .smps-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: justify;
+    padding: 1rem;
+  }
+  
+  .smps-image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-position: center;
+  }
+  
+  .smps-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 1rem;
+    color: #6D6D6D;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    width: 100%;
+  }
+  
+
+  /* ----------report section-------------- */
+  .report-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .report-section {
+      padding: 4rem;
+    }
+  }
+  
+  .report-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .report-content {
+      flex-direction: row;
+    }
+  }
+  
+  .report-image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 100%;
+    max-height: 37rem;
+    object-fit: cover;
+  }
+  
+  .report-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: justify;
+    padding: 1rem;
+  }
+  
+  .report-list {
+    color: #6D6D6D;
+    font-size: 1.125rem;
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .report-list li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .report-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .report-buttons {
+      flex-direction: row;
+      width: 50rem;
+      justify-content: space-between;
+    }
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #005AA7;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #005AA7;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .app-btn {
+    text-decoration: none;
+  }
+  

@@ -12,25 +12,53 @@ export class HomeProductsComponent {
   products = [
     {
       id: 1,
+      Header:'Real Time Order Management System',
       title: 'AMCS',
-      description: 'High-quality fresh milk from the best farms.',
+      description: 'PC Based Automatic Milk Collection System is simply know to be white revolution',
       imageUrl: '02-AMCS.jpg',
       link: '#'
     },
     {
       id: 2,
+      Header:'Real Time Order Management System',
       title: 'POS',
-      description: 'Delicious and organic cheese for all your needs.',
+      description: 'Software that simplifies the way you do billing at your point of sale (POS). Instantly record sale',
       imageUrl: '02-Software-POS.png',
       link: '#'
     },
     {
       id: 3,
+      Header:'Real Time Order Management System',
       title: 'ERP',
-      description: 'Rich and creamy yogurt with natural flavors.',
+      description: 'We also provide custom-designed ERP Solutions tailored according to the precise requirements of the clients.',
       imageUrl: 'ERP-1.png',
       link: '#'
+    },
+    {
+      id: 4,
+      Header:'Real Time Order Management System',
+      title: '  RTMOS',
+      description: 'RTOMS stands of Real Time Order Management system where user can place order online.',
+      imageUrl: 'RTMOS.jpg',
+      link: '#'
+    },
+    {
+      id: 5,
+      Header:'Real Time Order Management System',
+      title: 'SMPS',
+      description: 'SMSP is Android Operating System based Milk Procurement System is specially',
+      imageUrl: 'SMPS-02-1.jpg',
+      link: '#'
+    },
+    {
+      id: 6,
+      Header:'Real Time Order Management System',
+      title: 'SDMS',
+      description: 'It’s a unique all in one dairy management solution start from procurement to the production',
+      imageUrl: 'SDMS-02-1.jpg',
+      link: '#'
     }
+ 
   ];
 
   currentIndex = 0;

@@ -1,8 +1,8 @@
 <div class="product-container">
     <div class="product-left">
         <h1>Our Products</h1>
-        <h3>Explore our range of dairy products</h3>
-        <p>We provide top-quality dairy products for your needs. Browse our selection below.</p>
+        <h3>{{products[currentIndex].Header}}</h3>
+        <p>{{ products[currentIndex].description}}</p>
 
         <div class="btn-container">
             <a target="_blank" href="#" class="custom-btn">
@@ -20,7 +20,7 @@
                 <img [src]='products[currentIndex].imageUrl' [alt]="products[currentIndex].title" class="fade">
             </div>
             <p>{{ products[currentIndex].title }}</p> 
-            <a [href]="products[currentIndex].link">View more →</a>
+          
         </div>
     </div>
 </div>
