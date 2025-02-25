@@ -12,7 +12,7 @@ export class HomeProductsComponent {
   products = [
     {
       id: 1,
-      Header:'Real Time Order Management System',
+      Header:'Automatic Milk Collection System',
       title: 'AMCS',
       description: 'PC Based Automatic Milk Collection System is simply know to be white revolution',
       imageUrl: '02-AMCS.jpg',
@@ -28,7 +28,7 @@ export class HomeProductsComponent {
     },
     {
       id: 3,
-      Header:'Real Time Order Management System',
+      Header:'ERP solution',
       title: 'ERP',
       description: 'We also provide custom-designed ERP Solutions tailored according to the precise requirements of the clients.',
       imageUrl: 'ERP-1.png',
@@ -37,14 +37,14 @@ export class HomeProductsComponent {
     {
       id: 4,
       Header:'Real Time Order Management System',
-      title: '  RTMOS',
+      title: 'RTOMS',
       description: 'RTOMS stands of Real Time Order Management system where user can place order online.',
       imageUrl: 'RTMOS.jpg',
       link: '#'
     },
     {
       id: 5,
-      Header:'Real Time Order Management System',
+      Header:'Smart Milk Procurement System',
       title: 'SMPS',
       description: 'SMSP is Android Operating System based Milk Procurement System is specially',
       imageUrl: 'SMPS-02-1.jpg',
@@ -52,7 +52,7 @@ export class HomeProductsComponent {
     },
     {
       id: 6,
-      Header:'Real Time Order Management System',
+      Header:'Smart Dairy Management System',
       title: 'SDMS',
       description: 'It’s a unique all in one dairy management solution start from procurement to the production',
       imageUrl: 'SDMS-02-1.jpg',
@@ -75,6 +75,6 @@ export class HomeProductsComponent {
         this.currentIndex = (this.currentIndex + 1) % this.products.length;
         this.isFadingOut = false; // Start fade-in animation
       }, 800); // Delay to match fade-out transition
-    }, 3000); // Change every 3 seconds
+    }, 4000); // Change every 3 seconds
   }
 }
