@@ -1,4 +1,10 @@
-<div class="image-container">
+<!-- <div class="image-container" [style]="background-image: url(Homepage-Banner-02.png)">
   <p>One Stop Dairy Supply Chain Management via IOT</p>
   <img src="Homepage-Banner-01.png" alt="">
+</div> -->
+
+<div class="image-container" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+
+  <p>One Stop Dairy Supply Chain Management via IOT</p>
+  <img src="Homepage-Banner-01.png" alt="Dairy Supply Chain">
 </div>

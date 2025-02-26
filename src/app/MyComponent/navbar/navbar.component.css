@@ -43,9 +43,13 @@
   list-style: none;
   display: flex;
   margin: 0;
+  padding: px;
+}
+.mb-menu-ul{
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
-
 .menu-item {
   position: relative;
 }
@@ -87,15 +91,11 @@
 /* Dropdown Icon */
 .mat-icon {
   font-size: 18px;
-  vertical-align: middle;
+  vertical-align:bottom;
 }
 
 /* Mobile Menu Button */
 .menu-toggle {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 24px;
   display: none;
   cursor: pointer;
 }
@@ -170,3 +170,7 @@ a.active{
    z-index: 1000;
    background-color: #f7f7f7;
  }
+::ng-deep .mat-mdc-menu-panel
+{
+  padding: 20px 30px   ;
+}
