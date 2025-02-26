@@ -8,6 +8,6 @@ import {  CommonModule} from '@angular/common'
   styleUrls: ['./home-header.component.css']
 })
 export class HomeHeaderComponent  {
-  backgroundImage = "Homepage-Banner-02.png";
+  backgroundImage = "Homepage-Banner-02.jpg";
 
 }

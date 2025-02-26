@@ -11,7 +11,7 @@ import { ElementRef, ViewChild } from '@angular/core';
 export class HomeClientReviewComponent {
   @ViewChild('reviews', { static: false }) reviewsContainer!: ElementRef;
  
-  backgroundImage = '/assets/images/client-testinomial-back-image.png';
+  backgroundImage = 'client-testinomial-back-image.png';
 
   testimonials = [
     {
