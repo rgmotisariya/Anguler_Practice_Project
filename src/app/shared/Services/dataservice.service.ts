@@ -6,12 +6,16 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class DataserviceService {
-  private dataUrl = 'data.json'; 
+  private dataUrl = 'data.json';  
+  private _url='https://localhost:7045/api/Strudent'
 
   constructor(private http: HttpClient) {}
 
   getServices(): Observable<any> {
     return this.http.get<any>(this.dataUrl);
+  }
+  getStudentData(){
+    return this.http.get<any>(this._url);
   }
  
 }

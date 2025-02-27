@@ -10,10 +10,11 @@ import { DataserviceService } from '../../shared/Services/dataservice.service';
   imports: [CommonModule], 
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.css']
-})
+})  
 export class ServiceComponent implements OnInit {
 
   public services: any[] = [];
+  public student: any[] = [];
 
   constructor(private route: ActivatedRoute, private dataserviceService: DataserviceService) {}
 
@@ -22,7 +23,13 @@ export class ServiceComponent implements OnInit {
       this.services = data.services; 
       // console.log( this.services);
     });
+
+    this.dataserviceService.getStudentData().subscribe((data) => {
+      this.student=data;
+      console.log(this.student);
+    })
   }
+      
 
   ngAfterViewInit() {
     this.route.fragment.subscribe((fragment) => {
